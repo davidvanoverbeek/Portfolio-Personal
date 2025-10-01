@@ -1,0 +1,433 @@
+/* ------------------------------------ */
+/* Base y Tipografía */
+/* ------------------------------------ */
+*{
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
+}
+
+
+
+body {
+    /* Fondo básico de color gris oscuro */
+    background-color: #111111; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f5f5; /* Color de texto claro */
+    line-height: 1.6;
+}
+
+/* ------------------------------------ */
+/* Estilos de Navegación */
+/* ------------------------------------ */
+
+header {
+    background-color: #333333; /* Un gris ligeramente más claro para la cabecera */
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Aseguramos que el header esté por encima de todo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 1.8em;
+    color: #05e04e; /* Color de acento */
+}
+
+/* Botón de menú de hamburguesa (oculto por defecto en desktop) */
+#menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: #05e04e;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* En desktop, es una fila */
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #05e04e; 
+}
+
+/* ------------------------------------ */
+/* Formato de Cajas (Apartados) */
+/* ------------------------------------ */
+
+main {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra las cajas horizontalmente */
+}
+
+.content-box {
+    /* Define la caja principal del apartado */
+    width: 90%; 
+    max-width: 1000px; 
+    margin-bottom: 40px;
+    padding: 40px;
+    
+    /* Estilos de la caja */
+    background-color: #222222; /* Fondo oscuro para la caja */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad */
+    transition: transform 0.3s;
+}
+
+.content-box:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+}
+
+.content-box h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-left: 5px solid #05e04e;
+    padding-left: 15px;
+    color: #05e04e;
+}
+
+/* ------------------------------------ */
+/* Estilos para la sección de Inicio (Presentación con imagen) */
+/* ------------------------------------ */
+
+.intro-content {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen y el texto */
+    gap: 40px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-picture {
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Forma circular */
+    overflow: hidden; 
+    border: 5px solid #05e04e; /* Borde de color de acento */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+}
+
+/* ------------------------------------ */
+/* Estilos de Proyectos (works) */
+/* ------------------------------------ */
+
+.project-grid {
+    display: grid;
+    /* Muestra 3 columnas en pantallas grandes, ajustando automáticamente (responsive) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #222222; 
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.project-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    background-color: #05e04e; 
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-logo img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.project-card h3 {
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    flex-grow: 1; 
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #05e04e;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding-top: 5px;
+    border-top: 1px solid #222222;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #05e04e; 
+}
+
+/* ------------------------------------ */
+/* Estilos de Habilidades (skills) */
+/* ------------------------------------ */
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.skill-card {
+    width: 120px; /* Ancho fijo para cada tarjeta de habilidad */
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #222222;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background-color: #05e04e; /* Resalta la tarjeta al pasar el ratón */
+    color: #212121;
+}
+
+.skill-card img {
+    width: 60px; /* Tamaño del logo */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.skill-card:hover p {
+    color: #212121; /* Cambia el color del texto al pasar el ratón */
+}
+
+/* ------------------------------------ */
+/* Estilos de Contacto (contact) */
+/* ------------------------------------ */
+
+.contact-cards-grid {
+    display: grid;
+    /* Dos columnas, se apilan en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    text-decoration: none; 
+    color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Estilos específicos para GitHub */
+.contact-card.github {
+    background-color: #444444; 
+    border-bottom: 5px solid #000; 
+}
+
+/* Estilos específicos para Gmail */
+.contact-card.gmail {
+    background-color: #444444; 
+    border-bottom: 5px solid #EA4335; 
+}
+
+/* Efecto hover */
+.contact-card:hover {
+    transform: translateY(-5px);
+    background-color: #555555;
+}
+
+/* Iconos de las tarjetas */
+.contact-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.contact-card.github i {
+    color: #000; 
+}
+.contact-card.gmail i {
+    color: #EA4335; 
+}
+
+.contact-card h3 {
+    margin-bottom: 5px;
+    color: #05e04e;
+}
+
+.contact-card span {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #bbb;
+    margin-top: 10px;
+}
+
+/* ------------------------------------ */
+/* MEDIA QUERIES (RESPONSIVE DESIGN) */
+/* ------------------------------------ */
+
+/* 1. TABLET (Máximo 768px de ancho) */
+@media (max-width: 768px) {
+    
+    /* Adaptación del layout general */
+    header {
+        padding: 20px 30px;
+    }
+    
+    .content-box {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .content-box h2 {
+        font-size: 2em; /* Ajuste para títulos en tablet */
+    }
+
+    /* Adaptación de la imagen de presentación */
+    .intro-content {
+        flex-direction: column; /* Apila la imagen y el texto */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px; 
+    }
+
+    /* Adaptación de las cuadrículas: 2 columnas */
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* 2. MÓVIL (Máximo 600px de ancho) */
+@media (max-width: 600px) {
+    
+    header {
+        padding: 15px 20px;
+    }
+    
+    /* Mostrar botón de menú */
+    #menu-toggle {
+        display: block; 
+    }
+
+    /* Ocultar la navegación de desktop y prepararla para el despliegue */
+    nav ul {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column; /* Lo ponemos en columna */
+        position: absolute;
+        top: 60px; /* Debajo de la cabecera (ajustar si el header tiene otro alto) */
+        left: 0;
+        width: 100%;
+        background-color: #2c2c2c;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 10px 0;
+        z-index: 90;
+    }
+    
+    /* Clase que el JS usa para mostrar el menú desplegable */
+    nav ul.open {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 0;
+        border-bottom: 1px solid #333;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .content-box h2 {
+        font-size: 1.8em; /* Ajuste para títulos en móvil */
+    }
+
+    /* Imagen de presentación más pequeña en móvil */
+    .profile-picture {
+        width: 120px; 
+        height: 120px;
+    }
+
+    /* Forzar todas las cuadrículas a una sola columna */
+    .project-grid, 
+    .contact-cards-grid {
+        grid-template-columns: 1fr; /* Una sola columna para todo */
+    }
+
+    /* Habilidades con menos espacio */
+    .skills-grid {
+        gap: 15px;
+    }
+    
+    .skill-card {
+        width: 100px;
+    }
+}
