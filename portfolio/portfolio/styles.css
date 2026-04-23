@@ -8,14 +8,13 @@
     scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
 }
 
+
+
 body {
-    /* Fondo con imagen */
-    background-image: url(img/tech_portfolio_background.svg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
+    /* Fondo básico de color gris oscuro */
+    background-color: #111111; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f5f5; /* Color de texto claro */
     line-height: 1.6;
 }
 
@@ -24,9 +23,7 @@ body {
 /* ------------------------------------ */
 
 header {
-    background-color: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); 
+    background-color: #333333; /* Un gris ligeramente más claro para la cabecera */
     padding: 20px 50px;
     position: sticky;
     top: 0;
@@ -48,13 +45,13 @@ nav h1 {
 }
 
 /* Botón de menú de hamburguesa (oculto por defecto en desktop) */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+#menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: #05e04e;
+    font-size: 1.8em;
+    cursor: pointer;
 }
 
 nav ul {
@@ -90,17 +87,15 @@ main {
 }
 
 .content-box {
+    /* Define la caja principal del apartado */
     width: 90%; 
     max-width: 1000px; 
     margin-bottom: 40px;
     padding: 40px;
     
-    background-color: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
-    color: #E5E7EB;
+    /* Estilos de la caja */
+    background-color: #222222; /* Fondo oscuro para la caja */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad */
     transition: transform 0.3s;
 }
@@ -115,10 +110,6 @@ main {
     border-left: 5px solid #05e04e;
     padding-left: 15px;
     color: #05e04e;
-}
-
-.content-box p {
-    font-size: 1.1em;
 }
 
 /* ------------------------------------ */
@@ -146,51 +137,6 @@ main {
     height: 100%;
     object-fit: cover; 
     display: block; 
-}
-
-/* ------------------------------------ */
-/* Estilos de Habilidades (skills) */
-/* ------------------------------------ */
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 30px;
-    margin-top: 30px;
-    padding: 20px 0;
-}
-
-.skill-card {
-    width: 120px; /* Ancho fijo para cada tarjeta de habilidad */
-    text-align: center;
-    padding: 15px 10px;
-    background-color: #222222;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-    background-color: #6666; /* Resalta la tarjeta al pasar el ratón */
-    color: #212121;
-}
-
-.skill-card img {
-    width: 60px; /* Tamaño del logo */
-    height: 60px;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-.skill-card:hover p {
-    color: #ffffff; /* Cambia el color del texto al pasar el ratón */
 }
 
 /* ------------------------------------ */
@@ -239,15 +185,9 @@ main {
 }
 
 .project-card p {
-    font-size: 1.1em;
+    font-size: 0.9em;
     flex-grow: 1; 
     margin-bottom: 15px;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    background-color: #6666; /* Resalta la tarjeta al pasar el ratón */
-    color: #ffffff;
 }
 
 .project-link {
@@ -265,11 +205,57 @@ main {
 }
 
 /* ------------------------------------ */
+/* Estilos de Habilidades (skills) */
+/* ------------------------------------ */
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.skill-card {
+    width: 120px; /* Ancho fijo para cada tarjeta de habilidad */
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #222222;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    background-color: #05e04e; /* Resalta la tarjeta al pasar el ratón */
+    color: #212121;
+}
+
+.skill-card img {
+    width: 60px; /* Tamaño del logo */
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.skill-card:hover p {
+    color: #212121; /* Cambia el color del texto al pasar el ratón */
+}
+
+/* ------------------------------------ */
 /* Estilos de Contacto (contact) */
 /* ------------------------------------ */
 
 .contact-cards-grid {
     display: grid;
+    /* Dos columnas, se apilan en pantallas pequeñas */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 30px;
     margin-top: 30px;
@@ -284,33 +270,27 @@ main {
     padding: 30px;
     border-radius: 10px;
     text-decoration: none; 
-    color: #ffffff;
+    color: #f5f5f5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, background-color 0.3s;
 }
 
 /* Estilos específicos para GitHub */
 .contact-card.github {
-    background-color: #222222; 
+    background-color: #444444; 
     border-bottom: 5px solid #000; 
 }
 
 /* Estilos específicos para Gmail */
 .contact-card.gmail {
-    background-color: #222222; 
+    background-color: #444444; 
     border-bottom: 5px solid #EA4335; 
-}
-
-/* Estilos específicos para LinkedIn */
-.contact-card.linkedin {
-    background-color: #222222; 
-    border-bottom: 5px solid #0A66C2; 
 }
 
 /* Efecto hover */
 .contact-card:hover {
     transform: translateY(-5px);
-    background-color: #6666;
+    background-color: #555555;
 }
 
 /* Iconos de las tarjetas */
@@ -322,13 +302,8 @@ main {
 .contact-card.github i {
     color: #000; 
 }
-
 .contact-card.gmail i {
     color: #EA4335; 
-}
-
-contact-card.linkedin i {
-    color: #0A66C2; 
 }
 
 .contact-card h3 {
@@ -336,21 +311,11 @@ contact-card.linkedin i {
     color: #05e04e;
 }
 
-.contact-card p {
-    font-size: 1.1em;
-}
-
 .contact-card span {
-    font-size: 1em;
+    font-size: 0.9em;
     font-style: italic;
-    color: #c5c4c4;
+    color: #bbb;
     margin-top: 10px;
-}
-
-.contact-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
 }
 
 /* ------------------------------------ */
@@ -360,36 +325,23 @@ contact-card.linkedin i {
 /* 1. TABLET (Máximo 768px de ancho) */
 @media (max-width: 768px) {
     
+    /* Adaptación del layout general */
     header {
         padding: 20px 30px;
     }
     
-    body {
-        background-attachment: scroll;
-    }
-
-    nav h1 {
-        font-size: 1.4rem;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 1.4rem;
-        padding: 6px 10px;
-        border-radius: 8px;
-    }
-      
     .content-box {
         padding: 30px 20px;
         margin-bottom: 30px;
     }
     
     .content-box h2 {
-        font-size: 2em;
+        font-size: 2em; /* Ajuste para títulos en tablet */
     }
 
+    /* Adaptación de la imagen de presentación */
     .intro-content {
-        flex-direction: column;
+        flex-direction: column; /* Apila la imagen y el texto */
         text-align: center;
         gap: 20px;
     }
@@ -400,6 +352,7 @@ contact-card.linkedin i {
         margin-bottom: 10px; 
     }
 
+    /* Adaptación de las cuadrículas: 2 columnas */
     .project-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
@@ -413,26 +366,17 @@ contact-card.linkedin i {
         padding: 15px 20px;
     }
     
-    body {
-        background-attachment: scroll;
+    /* Mostrar botón de menú */
+    #menu-toggle {
+        display: block; 
     }
 
-    nav h1 {
-        font-size: 1.4rem;
-    }
-
-    .menu-toggle {
-        display: block;
-    font-size: 1.4rem;
-    padding: 6px 10px;
-    border-radius: 8px;
-    }
-
+    /* Ocultar la navegación de desktop y prepararla para el despliegue */
     nav ul {
-        display: none;
-        flex-direction: column;
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column; /* Lo ponemos en columna */
         position: absolute;
-        top: 60px;
+        top: 60px; /* Debajo de la cabecera (ajustar si el header tiene otro alto) */
         left: 0;
         width: 100%;
         background-color: #2c2c2c;
@@ -441,6 +385,7 @@ contact-card.linkedin i {
         z-index: 90;
     }
     
+    /* Clase que el JS usa para mostrar el menú desplegable */
     nav ul.open {
         display: flex; 
     }
@@ -462,19 +407,22 @@ contact-card.linkedin i {
     }
 
     .content-box h2 {
-        font-size: 1.8em; 
+        font-size: 1.8em; /* Ajuste para títulos en móvil */
     }
 
+    /* Imagen de presentación más pequeña en móvil */
     .profile-picture {
         width: 120px; 
         height: 120px;
     }
 
+    /* Forzar todas las cuadrículas a una sola columna */
     .project-grid, 
     .contact-cards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una sola columna para todo */
     }
 
+    /* Habilidades con menos espacio */
     .skills-grid {
         gap: 15px;
     }
