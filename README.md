@@ -5,19 +5,6 @@ El proyecto muestra mis habilidades, tecnologías, proyectos y formas de contact
 
 ---
 
-## 🚀 Demo
-
-🔗 Puedes ver el proyecto desplegado aquí:  
-*(Añade tu link de GitHub Pages o hosting cuando lo tengas)*
-
----
-
-## 📸 Vista previa
-
-![Portfolio Preview](portfolio/img/Preview.png)
-
----
-
 ## 🧑‍💻 Sobre el proyecto
 
 Este portfolio está diseñado para ser **moderno, responsive y minimalista**, con enfoque en:
@@ -26,6 +13,12 @@ Este portfolio está diseñado para ser **moderno, responsive y minimalista**, c
 - Showcase de habilidades técnicas
 - Galería de proyectos
 - Sección de contacto directa
+
+---
+
+## 📸 Vista previa
+
+![Portfolio Preview](portfolio/img/Preview.png)
 
 ---
 
