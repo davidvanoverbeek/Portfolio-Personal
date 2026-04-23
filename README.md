@@ -14,7 +14,7 @@ El proyecto muestra mis habilidades, tecnologías, proyectos y formas de contact
 
 ## 📸 Vista previa
 
-![Portfolio Preview](img/Preview.png)
+![Portfolio Preview](portfolio/img/Preview.png)
 
 ---
 
