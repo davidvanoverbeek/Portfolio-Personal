@@ -71,14 +71,14 @@ Gestor de películas y reseñas de usuarios.
 ## 📫 Contacto
 
 - GitHub: [davidvanoverbeek](https://github.com/davidvanoverbeek)
-- LinkedIn: [Perfil profesional](https://www.linkedin.com)
+- LinkedIn: [davidantoniovanoverbeekcrusells](https://www.linkedin.com/in/davidantoniovanoverbeekcrusells/)
 - Email: davidvanoverbeekcrusells@gmail.com
 
 ---
 
 ## ⚡ Autor
 
-Desarrollado por **David van Overbeek Crusells**  
+Desarrollado por **David Antonio van Overbeek Crusells**  
 Estudiante de DAW enfocado en desarrollo full-stack.
 
 ---
